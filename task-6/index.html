@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1vw;
+        }
+
+        .tabs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2vw;
+        }
+
+        .tab {
+            padding: 1vw 2vw;
+            background-color: rgb(172, 172, 181);
+        }
+
+        h3 {
+            display: none;
+        }
+
+        p {
+            font-size: 1.2vw;
+        }
+
+        button {
+            font-size: 1.2vw;
+            padding: 1vw 3vw;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab">Home</div>
+            <div class="tab">About</div>
+            <div class="tab">Contact</div>
+        </div>
+
+        <h3 id="home-text">Home Page  <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis a explicabo, atque quasi
+            dolorem vel beatae ex ad reiciendis sequi, soluta fuga aperiam repellendus in, doloribus quae asperiores
+            numquam voluptas omnis? Autem rem provident hic, animi est nam non enim impedit explicabo, deleniti illo ad
+            odio quasi culpa? In voluptate autem vel fugit. Id repudiandae architecto, neque, officia asperiores
+            voluptate unde molestiae perferendis ipsa nostrum laudantium vero. Nostrum temporibus earum architecto,
+            laborum porro quis eaque optio a nobis. In quia magnam consequatur cupiditate ex. Nostrum, ullam quod iure
+            placeat nisi, similique consequuntur doloremque ab id, voluptates quam quia veniam minus.</h3>
+
+        <h3 id="about-text"> About Page <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel autem enim dolores veritatis
+            dolorem natus, esse adipisci facilis quod! Facilis, fugit totam eos sed minus laboriosam! Ullam voluptate
+            modi eos.</h3>
+
+        <h3 id="contact-text">Contact Page  <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus recusandae eligendi
+            consequuntur nostrum soluta? Cumque ipsam quidem, perferendis voluptatem tempora veritatis eius qui
+            laudantium esse maiores cupiditate, nobis possimus expedita id excepturi dolorem eveniet minus. Placeat
+            vitae quia aut molestiae assumenda similique minus dolor fuga iusto eligendi alias eum exercitationem ea,
+            non, recusandae est voluptatum sapiente, quae mollitia incidunt? Natus assumenda pariatur temporibus aliquam
+            cupiditate nemo odio quos laboriosam eos itaque fugiat, culpa illo repudiandae? Inventore harum vel, vero
+            pariatur a, dicta necessitatibus hic obcaecati corrupti eligendi ullam recusandae ad quas quia, ea
+            dignissimos? Eaque, eum sit necessitatibus maiores voluptate quidem, architecto alias cum eligendi autem
+            ipsa quos. Itaque nobis suscipit vel at quaerat minus facere, fuga voluptas. Dolore ullam iusto amet
+            repudiandae. Quos tempore eius saepe, dicta mollitia incidunt pariatur officia nihil iste animi. Voluptates
+            laudantium mollitia, maxime molestiae sint delectus debitis, repellat harum cum reiciendis ea, unde vero
+            veritatis quibusdam! Earum eveniet, totam dignissimos non dicta sunt dolorem libero eaque. Quae ipsa ab
+            debitis voluptates ducimus eos eum reiciendis esse nostrum perspiciatis dolorum repellendus beatae nemo
+            totam ullam, fugit tempora necessitatibus quisquam consequatur fuga ea sit molestias? Ullam nostrum
+            laudantium provident aliquam hic accusantium reprehenderit. Cupiditate, similique eum?</h3>
+
+    </div>
+
+    <script>
+    let tab = document.querySelectorAll(".tab");
+    let h3 = document.querySelectorAll("h3");
+    h3[0].style.display="block";
+    h3[0].style.width = "50%";
+
+    tab.forEach( (div , index)=> {
+        div.addEventListener("click", ()=> {
+            hideAlltext();
+            h3[index].style.display="block";
+    h3[index].style.width = "50%";
+        })
+    });  
+
+    function hideAlltext() {
+        h3.forEach( (text) => {
+            text.style.display= "none";
+        })
+    }
+      </script>
+</body>
+
+</html>
