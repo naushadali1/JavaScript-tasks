@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1vw;
+        }
+        p{
+            font-size: 1.2vw;
+        }
+
+        button{
+            font-size: 1.2vw;
+            padding: 1vw 3vw;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Swap Images</h1> 
+        <img id="img1" src="https://images.unsplash.com/photo-1714572877812-7b416fbd4314?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8" alt="" width="300px" height="300px">
+        <img id="img2" src="https://images.unsplash.com/photo-1715645942867-4c8649966352?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8" alt="" width="300px" height="300px">
+        <button>Swap Images</button>
+    </div>
+    
+
+    <script >
+        let img1 = document.querySelector('#img1');
+        let img2 = document.querySelector('#img2')
+        let btn = document.querySelector('button');
+        btn.addEventListener("click", ()=>{
+        var  src1= img1.src;
+        var  src2= img2.src;
+           img1.src=src2;
+           img2.src=src1;           
+        })
+    </script>
+</body>
+</html>
